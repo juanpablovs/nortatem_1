@@ -17,7 +17,14 @@
     {% endif %}
   </head>
   <body>
+    <div class="container-fluid">
+      <h1>LA NAVBAR</h1>
+      <img src="{% static 'images/logo/nortatem_logo.svg' %}" class="img-fluid" alt="nortatem_logo"/>
+    </div>
     {% block body %}{% endblock body%}
+    <div class="container-fluid">
+      <h1>EL FOOTER</h1>
+    </div>
     <script defer src="{% static 'bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js' %}" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
 </html>
