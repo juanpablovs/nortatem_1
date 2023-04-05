@@ -2,16 +2,18 @@
 
 window.addEventListener("load", function () {
 
-    // document.cookie = 'nortatem_cookie_status=true;';
     const cookieValue = document.cookie.search('nortatem_cookie_status');
 
-    console.log(cookieValue, cookieValue === -1);
+    if (cookieValue === -1) {
+        console.log('ahora sale');
+    }
+			// document.cookie = 'nortatem_cookie_status=true;';
 
     const cookieConsentModal = new bootstrap.Modal('#cookieconsentmodal', {
-        keyboard: false, show: true,
+        backdrop: 'static', focus: true, keyboard: false,
     });
 
-    cookieConsentModal.show()
+    cookieConsentModal.toggle()
 });
 
 
