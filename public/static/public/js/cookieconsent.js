@@ -1,21 +1,30 @@
-"use strict";
+'use strict';
 
-window.addEventListener("load", function () {
+window.addEventListener('load', function () {
+	const cookieValue = document.cookie.search('nortatem_cookie_status');
 
-    const cookieValue = document.cookie.search('nortatem_cookie_status');
+	if (cookieValue === -1) {
+		const cookieConsentModal = new bootstrap.Modal('#cookieconsentmodal', {
+			backdrop: 'static',
+			focus: true,
+			keyboard: false,
+		});
 
-    if (cookieValue === -1) {
-        console.log('ahora sale');
-    }
-			// document.cookie = 'nortatem_cookie_status=true;';
+		cookieConsentModal.show();
 
-    const cookieConsentModal = new bootstrap.Modal('#cookieconsentmodal', {
-        backdrop: 'static', focus: true, keyboard: false,
-    });
+		const cookieConsentButtonAccept = document.getElementById(
+			'cookieconsentbuttonaccept',
+		);
 
-    cookieConsentModal.show()
-
-    const aa = document.getElementById('cookieconsentbuttonaccept');
-
-    aa.click = ()=>console.log(22222)
+		cookieConsentButtonAccept.addEventListener(
+			'click',
+			() => {
+				document.cookie = 'nortatem_cookie_status=true;';
+				cookieConsentModal.hide();
+			},
+			{
+				once: true,
+			},
+		);
+	}
 });
