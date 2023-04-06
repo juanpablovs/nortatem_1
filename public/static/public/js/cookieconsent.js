@@ -13,10 +13,9 @@ window.addEventListener("load", function () {
         backdrop: 'static', focus: true, keyboard: false,
     });
 
-    cookieConsentModal.toggle()
+    cookieConsentModal.show()
+
+    const aa = document.getElementById('cookieconsentbuttonaccept');
+
+    aa.click = ()=>console.log(22222)
 });
-
-
-// const myModal = new bootstrap.Modal(
-// 	document.getElementById('myModal'), {show: true}
-// );

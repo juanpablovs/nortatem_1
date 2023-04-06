@@ -33,17 +33,17 @@
     <script defer src="{% static 'public/js/cookieconsent.js' %}"></script>
     {% comment %} MODALS {% endcomment %}
     <div class="modal" id="cookieconsentmodal" tabindex="-1" aria-label="cookieconsent" aria-describedby="cookieconsent">
-      <div class="modal-dialog">
+      <div class="modal-dialog" id="cookieconsentmodaldialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title">Cookie Policy</h5>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <p>This site uses cookies. When you click on ACCEPT or if you continue browsing cookies might be installed on your device <a href="{% url 'public:legal' %}">Privacy Policy</a></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            {% comment %} <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="cookieconsentbuttonaccept">Accept</button> {% endcomment %}
+            <button type="button" class="btn btn-primary"  id="cookieconsentbuttonaccept">Accept</button>
           </div>
         </div>
       </div>
