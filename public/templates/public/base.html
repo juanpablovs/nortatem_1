@@ -34,19 +34,14 @@
     {% endif %}
     <script defer src="{% static 'public/js/cookieconsent.js' %}"></script>
 
-    {% comment %} MODALS {% endcomment %}
-    <div class="modal" id="cookieconsentmodal" tabindex="-1" aria-label="cookieconsent" aria-describedby="cookieconsent">
-      <div class="modal-dialog" id="cookieconsentmodaldialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Cookie Policy</h5>
-          </div>
-          <div class="modal-body">
-            <p>This site uses cookies. When you click on ACCEPT or if you continue browsing cookies might be installed on your device <a href="{% url 'public:legal' %}">Privacy Policy</a></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary"  id="cookieconsentbuttonaccept">Accept</button>
-          </div>
+    {% comment %} COOKIECONSENT {% endcomment %}
+    <div class="container-fluid" id="cookieconsentdiv">
+      <div class="cookieconsentdialog">
+        <div class="cookieconsent-body">
+          <p>This site uses cookies. When you click on ACCEPT or if you continue browsing cookies might be installed on your device <a href="{% url 'public:legal' %}">Privacy Policy</a></p>
+        </div>
+        <div class="cookieconsent-button">
+          <button type="button" class="btn btn-primary cookieconsent-button"  id="cookieconsentbuttonaccept">Accept</button>
         </div>
       </div>
     </div>

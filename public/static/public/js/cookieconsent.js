@@ -4,13 +4,8 @@ window.addEventListener('load', function () {
 	const cookieValue = document.cookie.search('nortatem_cookie_status');
 
 	if (cookieValue === -1) {
-		const cookieConsentModal = new bootstrap.Modal('#cookieconsentmodal', {
-			backdrop: 'static',
-			focus: true,
-			keyboard: false,
-		});
 
-		cookieConsentModal.show();
+		document.getElementById('cookieconsentdiv').style.display = ('block');
 
 		const cookieConsentButtonAccept = document.getElementById(
 			'cookieconsentbuttonaccept',
@@ -20,7 +15,7 @@ window.addEventListener('load', function () {
 			'click',
 			() => {
 				document.cookie = 'nortatem_cookie_status=true;max-age=31536000';
-				cookieConsentModal.hide();
+				document.getElementById('cookieconsentdiv').style.display = 'none';
 			},
 			{
 				once: true,
