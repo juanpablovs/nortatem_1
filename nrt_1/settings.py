@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'nrt_1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dbfortest',
+        'NAME': 'nrtdbfortest',
         'USER': 'root',
         'PASSWORD': 'aaaa',
         'HOST': '127.0.0.1',
