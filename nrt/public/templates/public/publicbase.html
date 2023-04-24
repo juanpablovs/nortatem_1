@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="{% static 'images/favicon/favicon-32x32.png' %}"
+		/>
+        <link
+			rel="icon"
+			type="image/x-icon"
+			href="{% static 'images/favicon/favicon-16x16.png' %}"
+		/>
+        <link
+			rel="icon"
+			type="image/x-icon"
+			href="{% static 'images/favicon/favicon.ico' %}"
+		/>
+        <link
+			rel="apple-touch-icon"
+			type="image/x-icon"
+			href="{% static 'images/favicon/apple-touch-icon.png' %}"
+		/>
+		<link rel="canonical" href="https://returntolifenote.com/" />
+		<title>{% block title %}{% endblock title %}</title>
+		<meta
+			name="keywords"
+			content="{{ page_keywords|default:'NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence' }}"
+		/>
+		<meta
+			name="description"
+			content="{{ page_description|default:'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required' }}"
+		/>
+		<meta name="author" content="NORTATEM" />
+		{% comment %} <link href="{% static 'frontrln/css/base.css' %}" rel="stylesheet" /> {% endcomment %}
+		{% if page_css %}
+		{% comment %} <link href="{% static page_css %}" rel="stylesheet" /> {% endcomment %}
+		{% endif %}
+		{% comment %} <script defer src="{% static 'frontrln/js/base.js' %}"></script> {% endcomment %}
+		{% if page_js %}
+		{% comment %} <script defer src="{% static page_js %}"></script> {% endcomment %}
+		{% endif %}
+		{% comment %} <script defer src="{% static 'frontrln/js/cookieconsent.js' %}"></script> {% endcomment %}
+	</head>
+	<body>
+		{% include 'public/navbar.html' %}
+
+		{% block body %}{% endblock body %}
+
+		{% include 'public/footer.html' %}
+
+		{% include 'public/cookieconsent.html' %}
+	</body>
+</html>
