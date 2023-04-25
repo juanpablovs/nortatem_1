@@ -1,1 +1,3 @@
-console.log('hi from publicbase');
+"use strict";
+
+console.log("hi from publicbase");

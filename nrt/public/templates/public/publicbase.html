@@ -25,7 +25,7 @@
 			type="image/x-icon"
 			href="{% static 'shared/images/favicon/apple-touch-icon.png' %}"
 		/>
-		<link rel="canonical" href="https://returntolifenote.com/" />
+		<link rel="canonical" href="https://nortatem.com/" />
 		<title>{% block title %}{% endblock title %}</title>
 		<meta
 			name="keywords"
@@ -36,15 +36,15 @@
 			content="{{ page_description|default:'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required' }}"
 		/>
 		<meta name="author" content="NORTATEM" />
-		{% comment %} <link href="{% static 'frontrln/css/base.css' %}" rel="stylesheet" /> {% endcomment %}
+		<link href="{% static 'public/css/publicbase.css' %}" rel="stylesheet" />
 		{% if page_css %}
-		{% comment %} <link href="{% static page_css %}" rel="stylesheet" /> {% endcomment %}
+		<link href="{% static page_css %}" rel="stylesheet" />
 		{% endif %}
-		{% comment %} <script defer src="{% static 'frontrln/js/base.js' %}"></script> {% endcomment %}
+		<script defer src="{% static 'public/js/publicbase.js' %}"></script>
 		{% if page_js %}
-		{% comment %} <script defer src="{% static page_js %}"></script> {% endcomment %}
+		<script defer src="{% static page_js %}"></script>
 		{% endif %}
-		{% comment %} <script defer src="{% static 'frontrln/js/cookieconsent.js' %}"></script> {% endcomment %}
+		<script defer src="{% static 'public/js/cookieconsent.js' %}"></script>
 	</head>
 	<body>
 		{% include 'public/navbar.html' %}
