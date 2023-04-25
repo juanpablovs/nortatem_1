@@ -1,13 +1,22 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+
 :root {
-    margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0 !important;
+	padding: 0 !important;
+	-webkit-box-sizing: border-box !important;
+	box-sizing: border-box !important;
+	font-size: 100%; /* 100% = 16px */
+	scroll-behavior: smooth;
 
     /* fonts */
+    --font-400-info-messages: 'Inconsolata', monospace;
 
     /* colors */
-    --generic-white: rgba(255,255,255);
-    --nortatem-red: rgba(164,16,52);
+    --nortatem-red-no-transp: rgba(164,16,52);
+    --nortatem-red-25-transp: rgba(164,16,52, 0.25);
+    --white-no-transp: rgba(255,255,255);
 }
 
 
@@ -19,22 +28,47 @@
 
 
 /* COOKIECONSENT */
-/* #cookieconsentdiv {
-    display: none;
-    background-color: var(--nortatem-red);
+
+#cookieconsent {
+    display: block;
     position: fixed;
-    bottom: 0px;
-    padding: 1% 3%;
-}
-.cookieconsentdialog {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--generic-white);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 2% 3%;
+    background-color: var(--nortatem-red-no-transp);
 }
 
-.cookieconsent-body p, .cookieconsent-body p a {
+.cookieconsent-dialog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white-no-transp);
+}
+
+.cookieconsent-body {
+    margin: 0;
+    padding: 0;
+    color: var(--white-no-transp);
+    font-family: var(--font-400-info-messages);
+    font-size: 1.4rem;
+}
+.cookieconsent-text, .cookieconsent-text a {
+    overflow: hidden;
+    animation: typing 3.5s steps(30, end),
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+/* .cookieconsent-body p, .cookieconsent-body p a {
     margin: 0;
     padding: 0;
     color: var(--generic-white)
