@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 navbar = {'titulo': 'el uno', 'otro': 'el dos'}
 footer = {}
-cookie_policy = {'cookie_policy_text': 'This site uses cookies. When you click on ACCEPT or if you continue browsing cookies might be installed on your device', 'cookie_policy_link': 'Privacy Policy'}
+cookie_policy = {'cookie_policy_text': 'This site uses cookies. When you click on ACCEPT or if you continue browsing cookies might be installed on your device', 'cookie_policy_link': 'Privacy Policy', 'cookie_policy_button_text': 'Accept'}
 
 def index(request):
     return render(request, 'public/index.html', {

@@ -1,86 +1,102 @@
 @import "normalize.css";
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
 :root {
-    margin: 0 !important;
+	margin: 0 !important;
 	padding: 0 !important;
 	-webkit-box-sizing: border-box !important;
 	box-sizing: border-box !important;
 	font-size: 100%; /* 100% = 16px */
 	scroll-behavior: smooth;
 
-    /* fonts */
-    --font-400-info-messages: 'Inconsolata', monospace;
+	/* fonts */
+	--font-400-info-messages: "Inconsolata", monospace;
 
-    /* colors */
-    --nortatem-red-no-transp: rgba(164,16,52);
-    --nortatem-red-25-transp: rgba(164,16,52, 0.25);
-    --white-no-transp: rgba(255,255,255);
+	/* colors */
+	--nortatem-red-no-transp: rgba(164, 16, 52);
+	--nortatem-red-25-transp: rgba(164, 16, 52, 0.25);
+	--white-no-transp: rgba(255, 255, 255);
 }
-
 
 /* NAVBAR*/
 
-
 /* FOOTER */
-
-
 
 /* COOKIECONSENT */
 
 #cookieconsent {
-    display: block;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    padding: 2% 3%;
-    background-color: var(--nortatem-red-no-transp);
+	display: none;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: var(--nortatem-red-no-transp);
 }
 
 .cookieconsent-dialog {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--white-no-transp);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	padding: 0;
 }
 
 .cookieconsent-body {
-    margin: 0;
-    padding: 0;
-    color: var(--white-no-transp);
-    font-family: var(--font-400-info-messages);
-    font-size: 1.4rem;
-}
-.cookieconsent-text, .cookieconsent-text a {
-    overflow: hidden;
-    animation: typing 3.5s steps(30, end),
+	margin: 0;
+	padding: 3% 2% 0 2%;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.cookieconsent-text,
+.cookieconsent-text a {
+	margin: 0;
+	padding: 0;
+	color: var(--white-no-transp);
+	font-family: var(--font-400-info-messages);
+	font-size: 1.4rem;
+	line-height: 1.3;
 }
 
-
-/* .cookieconsent-body p, .cookieconsent-body p a {
-    margin: 0;
-    padding: 0;
-    color: var(--generic-white)
+.cookieconsent-button {
+	margin: 0 auto;
+	padding: 7% 0;
 }
 
-.cookieconsent-button, .cookieconsent-button:focus-visible, .cookieconsent-button:active, .cookieconsent-button:hover {
-    border-color: var(--generic-white)!important;
-    border-radius: 5px!important;
-    background-color: var(--generic-white)!important;
-    color: var(--nortatem-red)!important;
+#cookieconsentbuttonaccept,
+#cookieconsentbuttonaccept:focus-visible,
+#cookieconsentbuttonaccept:active,
+#cookieconsentbuttonaccept:hover {
+	margin: 0;
+	padding: 14px 28px;
+	border-color: var(--nortatem-red-no-transp);
+	border-radius: 5px !important;
+	background-color: var(--white-no-transp);
+	color: var(--nortatem-red-no-transp);
+	font-family: var(--font-400-info-messages);
+	font-size: 1.4rem;
+	cursor: pointer;
 }
 
-.cookieconsent-button:active {
-    transform: scale(0.98)!important;
-} */
+#cookieconsentbuttonaccept:active {
+	transform: scale(0.9);
+}
+
+@media screen and (min-width: 768px) {
+
+    /* COOKIECONSENT */
+	.cookieconsent-dialog {
+		flex-direction: row;
+        padding: 2% 3%;
+	}
+
+	.cookieconsent-body {
+		padding: 1%;
+	}
+
+	.cookieconsent-button {
+		padding: 1%;
+	}
+}
