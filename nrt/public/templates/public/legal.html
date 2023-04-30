@@ -1,1 +1,29 @@
-<h1>this is legal</h1>
+{% extends 'public/publicbase.html' %}
+
+{% block title %}{{ page_title }}{% endblock title %}
+{% block keywords %}{{ keywords }}{% endblock keywords %}
+{% block description %}{{ description }}{% endblock description %}
+
+{% block body %}
+<section class="page-title">
+    <h1>{{ content.page_title }}</h1>
+    <p>{{ content.last_updated_msg }}</p>
+</section>
+
+<section>
+    <h2>{{ content.privacy_policy.title }}</h2>
+    <p>{{ content.privacy_policy.introduction }}</p>
+
+</section>
+
+{% for item in content.privacy_policy.contents %}
+    <p>{{ item.subtitle }}</p>
+    <p>{{ item.subtext }}</p>
+{% endfor %}
+
+
+
+
+
+
+{% endblock body %}
