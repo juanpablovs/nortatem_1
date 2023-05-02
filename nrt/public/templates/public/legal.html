@@ -1,1 +1,42 @@
-<h1>this is legal</h1>
+{% extends 'public/publicbase.html' %}
+
+{% block title %}{{ page_title }}{% endblock title %}
+{% block keywords %}{{ keywords }}{% endblock keywords %}
+{% block description %}{{ description }}{% endblock description %}
+
+{% block body %}
+
+<section class="page-title">
+    <h1>{{ content.page_title }}</h1>
+    <p>{{ content.last_updated_msg }}</p>
+</section>
+
+<section class="content-block" id="policy_privacy">
+    <h2 class="content-title">{{ content.privacy_policy.title }}</h2>
+    <p class="content-intro">{{ content.privacy_policy.introduction }}</p>
+    {% for item in content.privacy_policy.contents %}
+        <h3 class="content-subtitle">{{ item.subtitle }}</h3>
+        <p class="content-subtext">{{ item.subtext }}</p>
+    {% endfor %}
+</section>
+
+<section class="content-block" id="policy_cookies">
+    <h2 class="content-title">{{ content.cookie_policy.title }}</h2>
+    <p class="content-intro">{{ content.cookie_policy.introduction }}</p>
+    {% for item in content.cookie_policy.contents %}
+        <h3 class="content-subtitle">{{ item.subtitle }}</h3>
+        <p class="content-subtext">{{ item.subtext }}</p>
+    {% endfor %}
+</section>
+
+<section class="content-block">
+    <h2 class="content-title">{{ content.job_seekers_policy.title }}</h2>
+    <p class="content-intro">{{ content.job_seekers_policy.introduction }}</p>
+    {% for item in content.job_seekers_policy.contents %}
+        <h3 class="content-subtitle">{{ item.subtitle }}</h3>
+        <p class="content-subtext">{{ item.subtext }}</p>
+    {% endfor %}
+</section>
+
+
+{% endblock body %}

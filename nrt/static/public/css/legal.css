@@ -1,0 +1,73 @@
+section {
+    margin: 0;
+    padding: 0;
+}
+
+section.page-title {
+    margin: 5% 0 0 0;
+    padding: 0;
+}
+
+section.page-title > h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    color: var(--nortatem-red-no-transp);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+section.page-title > p {
+    padding: 2% 0 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+}
+
+section.content-block {
+    margin: 5% auto 0;
+    padding: 0 4% 0;
+    max-width: 968px;
+    text-align: center;
+}
+
+.content-title {
+    margin: 0;
+    padding: 0;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    color: var(--nortatem-red-no-transp);
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.content-intro {
+    margin: 20px 0;
+    padding: 0;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.content-subtitle {
+    margin: 50px 0 0;
+    padding: 0;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    color: var(--nortatem-red-no-transp);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.content-subtext {
+    margin: 20px 0;
+    padding: 0;
+    font-family: Times, "Times New Roman", Georgia, serif;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+
+@media screen and (min-width: 768px) {}
