@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
 		cookieConsentButtonAccept.addEventListener(
 			"click",
 			() => {
-				document.cookie = "nortatem_cookie_status=true;max-age=31536000";
+				document.cookie = "nortatem_cookie_status=true;max-age=31536000;path=/";
 				document.getElementById("cookieconsent").style.display = "none";
 			},
 			{
