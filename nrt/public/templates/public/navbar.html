@@ -1,4 +1,26 @@
 {% load static %}
 
-<h1>la navbar</h1>
-<img src={% static 'shared/images/logo/nortatem_logo.png' %} alt="logo" />
+<nav class="navbar">
+    <div class="navbar-brand-container">
+        <a class="navbar-brand" href="/">
+          <img src="{% static 'shared/images/logo/nortatem_logo.png' %}" alt="NORTATEM Logo" width="250" height="auto">
+        </a>
+    </div>
+    <div class="navbar-items-container" id="navbar-items">
+        <button type="button" class="navbar-button">Login</button>
+        <a href="{% url 'public:ceos' %}" class="navbar-item">{{ navbar.ceos }}</a>
+        <a href="{% url 'public:buyer' %}" class="navbar-item">{{ navbar.buyer }}</a>
+        <a href="{% url 'public:seller' %}" class="navbar-item">{{ navbar.seller }}</a>
+        <a href="{% url 'public:government' %}" class="navbar-item">{{ navbar.government }}</a>
+        <a href="{% url 'public:agent' %}" class="navbar-item">{{ navbar.agent }}</a>
+
+    </div>
+    <div class="navbar-menu-container">
+            <div class="navbar-menu" id="navbar-menu-toggler">
+                <div class="navbar-menu-bar-1"></div>
+                <div class="navbar-menu-bar-2"></div>
+                <div class="navbar-menu-bar-3"></div>
+        </div>
+    </div>
+
+</nav>

@@ -1,5 +1,6 @@
 @import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 :root {
 	margin: 0 !important;
@@ -11,6 +12,7 @@
 
 	/* fonts */
 	--font-400-info-messages: "Inconsolata", monospace;
+	--font-400-menu: "Work Sans", sans-serif;
 
 	/* colors */
 	--nortatem-red-no-transp: rgba(164, 16, 52);
@@ -19,6 +21,113 @@
 }
 
 /* NAVBAR*/
+
+.navbar {
+	margin: 0;
+	padding: 2%;
+	box-sizing: border-box;
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--white-no-transp);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar-items-container {
+	box-sizing: border-box;
+	height: auto;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 88px;
+	left: 0;
+	background-color: var(--nortatem-red-no-transp);
+	overflow: hidden;
+	transition: 0.8s;
+	padding: 30px 0 30px;
+	border-top-right-radius: 27px;
+	border-bottom-right-radius: 27px;
+}
+
+.navbar-button {
+	display: block;
+	width: 170px;
+	margin: 20px auto 30px;
+	padding: 10px 0px;
+	border-radius: 5px;
+	background-color: var(--white-no-transp);
+	border: none;
+	color: var(--nortatem-red-no-transp);
+	text-align: center;
+	font-family: var(--font-400-menu);
+	font-size: 1.4rem;
+	outline: none;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.navbar-button:hover {
+	width: 185px;
+}
+
+.navbar-button:active {
+	font-weight: bold;
+  	transform: scale(0.9);
+}
+
+.navbar-item {
+	margin: 20px 0 20px;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-family: var(--font-400-menu);
+	font-size: 1.4rem;
+	color: var(--white-no-transp);
+	display: block;
+	transition: 0.3s;
+}
+
+.navbar-item:hover {
+  	color: var(--nortatem-red-no-transp);
+	background-color: var(--white-no-transp);
+}
+
+.expand {
+	width: 250px;
+}
+
+.navbar-menu {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.navbar-menu-bar-1,
+.navbar-menu-bar-2,
+.navbar-menu-bar-3 {
+	width: 35px;
+	height: 3px;
+	background-color: var(--nortatem-red-no-transp);
+	margin: 8px 0;
+	transition: 0.4s;
+}
+
+.change .navbar-menu-bar-1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .navbar-menu-bar-2 {
+	opacity: 0;
+}
+
+.change .navbar-menu-bar-3 {
+	transform: translate(0, -11px) rotate(45deg);
+}
+
 
 /* FOOTER */
 
@@ -85,11 +194,10 @@
 }
 
 @media screen and (min-width: 768px) {
-
-    /* COOKIECONSENT */
+	/* COOKIECONSENT */
 	.cookieconsent-dialog {
 		flex-direction: row;
-        padding: 2% 3%;
+		padding: 2% 3%;
 	}
 
 	.cookieconsent-body {
