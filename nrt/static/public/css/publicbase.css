@@ -45,7 +45,7 @@
 	width: 0;
 	position: fixed;
 	z-index: 2;
-	top: 80px;
+	top: 88px;
 	left: 0;
 	background-color: var(--nortatem-red-no-transp);
 	overflow: hidden;
