@@ -1,19 +1,22 @@
 "use strict";
 
-window.addEventListener("load", function () {
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-
-    const navbarToggler = document.getElementById("navbar-menu-toggler");
-    navbarToggler.addEventListener("click", () => {
-
-        document.getElementById("navbar-items").classList.toggle("expand");
-        navbarToggler.classList.toggle("change");
-	});
+const navbarToggler = document.getElementById("navbar-menu-toggler");
+navbarToggler.addEventListener("click", () => {
+	document.getElementById("navbar-items").classList.toggle("expand");
+	navbarToggler.classList.toggle("change");
 });
+
+function typewriterEffect(elementId, text, speed = 120) {
+	let i = 0;
+	const textLength = text.length;
+
+	function typeWriter() {
+		if (i < textLength) {
+			document.getElementById(elementId).innerHTML += text.charAt(i);
+			i++;
+			setTimeout(typeWriter, speed);
+		}
+	}
+
+	typeWriter();
+}

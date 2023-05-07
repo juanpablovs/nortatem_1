@@ -21,9 +21,9 @@ def ceos(request):
     return render(request, 'public/ceos.html', {
         'page_title': 'NORTATEM | CEOs',
         'page_css': 'public/css/ceos.css', #optional
-        # 'page_js': 'public/js/index.js', #optional
+        # 'page_js': 'public/js/ceos.js', #optional
         'page_keywords': 'NORTATEM, CEOs, chatGPT, B2B marketplace, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
-        'page_description': 'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required',
+        'page_description': 'NORTATEM CEOs explains the advantages and benefits of NORTATEM for CEOs. Using a language model, our chatGPT, we explain why CEOs will not miss critical information, will have their own personal consultant, and develop an advantage in sales and purchasing over the competition',
         'navbar': navbar,
         'footer': footer,
         'cookie_policy': cookie_policy,
