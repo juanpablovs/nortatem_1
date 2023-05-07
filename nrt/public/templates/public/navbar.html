@@ -7,7 +7,7 @@
         </a>
     </div>
     <div class="navbar-items-container" id="navbar-items">
-        <button type="button" class="navbar-button">Login</button>
+        <button type="button" class="navbar-button">{{ navbar.login }}</button>
         <a href="{% url 'public:ceos' %}" class="navbar-item">{{ navbar.ceos }}</a>
         <a href="{% url 'public:buyer' %}" class="navbar-item">{{ navbar.buyer }}</a>
         <a href="{% url 'public:seller' %}" class="navbar-item">{{ navbar.seller }}</a>

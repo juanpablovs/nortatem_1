@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.utils.safestring import mark_safe
 
-navbar = {'ceos': 'CEOs', 'buyer': 'Buyer', 'seller': 'Seller', 'government': 'Government', 'agent': 'Agent'}
+navbar = {'login': 'Login', 'ceos': 'CEOs', 'buyer': 'Buyer', 'seller': 'Seller', 'government': 'Government', 'agent': 'Agent'}
 footer = {}
 cookie_policy = {'cookie_policy_text': 'This site uses cookies. When you click on ACCEPT or if you continue browsing cookies might be installed on your device', 'cookie_policy_link': 'Privacy Policy', 'cookie_policy_button_text': 'Accept'}
 
@@ -20,10 +20,10 @@ def index(request):
 def ceos(request):
     return render(request, 'public/ceos.html', {
         'page_title': 'NORTATEM | CEOs',
-        # 'page_css': 'public/css/index.css', #optional
+        'page_css': 'public/css/ceos.css', #optional
         # 'page_js': 'public/js/index.js', #optional
-        # 'page_keywords': 'NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
-        # 'page_description': 'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required',
+        'page_keywords': 'NORTATEM, CEOs, chatGPT, B2B marketplace, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
+        'page_description': 'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required',
         'navbar': navbar,
         'footer': footer,
         'cookie_policy': cookie_policy,
