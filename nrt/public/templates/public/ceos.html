@@ -7,12 +7,25 @@
 
 {% block body %}
 
-<h1>this is ceos</h1>
+<main>
 
+    <section style="background-color: lightblue">
+        <div class="section-title">
+            <h2>{{ content.section_1.title }}</h2>
+        </div>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_1.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" onclick="typewriterEffect('section-body-answer-exhaustive', '{{ content.section_1.answer }}')">{{ content.section_1.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p class="section-body-answer" id="section-body-answer-exhaustive"></p>
+            </div>
+        </div>
+    </section>
 
-
-{% comment %} <button type="button" onclick='typewriterEffect("eltexto", "this is it", 2000)'>button</button> {% endcomment %}
-{% comment %} <p id="eltexto" ></p> {% endcomment %}
-
+</main>
 
 {% endblock body %}
