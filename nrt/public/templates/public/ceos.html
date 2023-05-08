@@ -18,13 +18,15 @@
                 <p>{{ content.section_1.question }}</p>
             </div>
             <div class="section-body-button">
-                <button type="button" onclick="typewriterEffect('section-body-answer-exhaustive', '{{ content.section_1.answer }}')">{{ content.section_1.button_text }}</button>
+                <button type="button" class="generateAnswer"             data-id="ceos-section-body-answer-exhaustive"
+                data-answer="{{ content.section_1.answer }}">{{ content.section_1.button_text }}</button>
             </div>
             <div class="section-body-answer">
-                <p class="section-body-answer" id="section-body-answer-exhaustive"></p>
+                <p class="section-body-answer" id="ceos-section-body-answer-exhaustive"></p>
             </div>
         </div>
     </section>
+
 
 </main>
 

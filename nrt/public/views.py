@@ -21,7 +21,7 @@ def ceos(request):
     return render(request, 'public/ceos.html', {
         'page_title': 'NORTATEM | CEOs',
         'page_css': 'public/css/ceos.css', #optional
-        # 'page_js': 'public/js/ceos.js', #optional
+        'page_js': 'public/js/ceos.js', #optional
         'page_keywords': 'NORTATEM, CEOs, chatGPT, B2B marketplace, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
         'page_description': 'NORTATEM CEOs explains the advantages and benefits of NORTATEM for CEOs. Using a language model, our chatGPT, we explain why CEOs will not miss critical information, will have their own personal consultant, and develop an advantage in sales and purchasing over the competition',
         'navbar': navbar,
@@ -29,7 +29,7 @@ def ceos(request):
         'cookie_policy': cookie_policy,
         'content': {
             'section_1' : {
-                'title': 'Do not miss having unprecedented access to critical information about your competitors, customers, industry and company',
+                'title': 'Have ALL the critical information about your competitors, customers, and company',
                 'question': 'Compare my sales from yesterday with my competitors sales',
                 'button_text': 'View Answer',
                 'answer': 'Competitor A and B sold 582 units and 889 units at an average price of €2.79 and €2.19 respectively. Our sales were 329 units at an average price of €2.89. Based on that, would you like me to do a projection for this week?',
