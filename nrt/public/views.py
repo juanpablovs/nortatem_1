@@ -31,7 +31,7 @@ def ceos(request):
             'section_1' : {
                 'title': 'Have ALL the critical information about your competitors, customers, and company',
                 'question': 'Compare my sales from yesterday with my competitors sales',
-                'button_text': 'View Answer',
+                'button_text': 'Answer',
                 'answer': 'Competitor A and B sold 582 units and 889 units at an average price of €2.79 and €2.19 respectively. Our sales were 329 units at an average price of €2.89. Based on that, would you like me to do a projection for this week?',
             },
         },
