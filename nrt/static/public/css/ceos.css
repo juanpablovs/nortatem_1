@@ -1,6 +1,7 @@
-section { background-color: aquamarine;
+section {
+    background-color: var(--nortatem-red-12-transp);
     box-sizing: border-box;
-    margin: 3% 0;
+    margin: 3% 0 0;
     padding: 2% 4%;
     min-height: 400px;
 }
@@ -39,7 +40,7 @@ h1.section-title {
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .btn {
@@ -72,4 +73,32 @@ h1.section-title {
 
 @media screen and (min-width: 768px) {
 
+    h1.section-title {
+    margin: 2% 0 0;
+    font-size: 1.4rem;
+    }
+
+    .section-body {
+        flex-direction: row;
+        height: 300px;
+    }
+
+    .section-body-question, .section-body-button, .section-body-answer {
+        flex: 1;
+    }
+
+    .btn {
+        padding: 20px 35px;
+        font-size: 1.2rem;
+    }
+
+    .section-body-question > p, .section-body-answer > p {
+        text-align: start;
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .section-body-button {
+        text-align: center;
+    }
 }

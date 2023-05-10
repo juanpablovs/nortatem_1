@@ -25,6 +25,22 @@
         </div>
     </section>
 
+    <section>
+        <h1 class="section-title">{{ content.section_2.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_2.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer"             data-id="ceos-section-body-answer-reliability"
+                data-answer="{{ content.section_2.answer }}">{{ content.section_2.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="ceos-section-body-answer-reliability"></p>
+            </div>
+        </div>
+    </section>
+
 
 </main>
 

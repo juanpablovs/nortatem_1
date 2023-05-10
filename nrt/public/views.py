@@ -29,10 +29,16 @@ def ceos(request):
         'cookie_policy': cookie_policy,
         'content': {
             'section_1' : {
-                'title': 'Have ALL the critical information about your competitors, customers, and company',
-                'question': 'Compare my sales from yesterday with my competitors sales',
+                'title': 'Get ALL the critical information from your competitors, customers and your company',
+                'question': "Compare yesterday's sales of my company with those of my competitors",
                 'button_text': 'Answer',
-                'answer': 'Competitor A and B sold 582 units and 889 units at an average price of €2.79 and €2.19 respectively. Our sales were 329 units at an average price of €2.89. Based on that, would you like me to do a projection for this week?',
+                'answer': 'Competitor A sold 582 units at an average of €2.79 per unit. Competitor B sold 889 units at €2.19 on average. Our sales were 329 units at an average of €2.89. Based on this data, do you want me to estimate our sales and those of the competition for this week?',
+            },
+            'section_2' : {
+                'title': "Save time and money with a consultant who is 100% independent, unbiased and completely confidential",
+                'question': "Give me the breakdown of product A's sales by country, units, and price. Order the result by number of units.",
+                'button_text': 'Answer',
+                'answer': 'Yesterday, product A in country A sold 21 units at €2.1. In country B 19 units were sold at €2.3 and in country C 14 units were sold at €2.10. Commercial efficiency has decreased compared to the previous day',
             },
         },
     })
