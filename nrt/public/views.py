@@ -30,7 +30,7 @@ def ceos(request):
         'content': {
             'section_1' : {
                 'title': 'Get ALL the critical information from your competitors, customers and your company',
-                'question': "Compare yesterday's sales of my company with those of my competitors",
+                'question': "Compare our yesterday's sales with my competitors",
                 'button_text': 'Answer',
                 'answer': 'Competitor A sold 582 units at an average of €2.79 per unit. Competitor B sold 889 units at €2.19 on average. Our sales were 329 units at an average of €2.89. Based on this data, do you want me to estimate our sales and those of the competition for this week?',
             },
@@ -38,7 +38,37 @@ def ceos(request):
                 'title': "Save time and money with a consultant who is 100% independent, unbiased and completely confidential",
                 'question': "Give me the breakdown of product A's sales by country, units, and price. Order the result by number of units.",
                 'button_text': 'Answer',
-                'answer': 'Yesterday, product A in country A sold 21 units at €2.1. In country B 19 units were sold at €2.3 and in country C 14 units were sold at €2.10. Commercial efficiency has decreased compared to the previous day',
+                'answer': 'Yesterday, product A in Brazil sold 21 units at €2.1. In Germany 19 units were sold at €2.3 and in Indonesia 14 units were sold at €2.10. Commercial efficiency has decreased compared to the previous day but it is still 2% higher than last month',
+            },
+            'section_3' : {
+                'title': "Objectively measure your company's sales performance and skills",
+                'question': "Tell me yesterday's closed sales. How many offers we have outstanding and how many sales are being negotiated.",
+                'button_text': 'Answer',
+                'answer': 'Yesterday 32 sales were closed successfully. There are 94 published offers of which 21 of them are being negotiated. According to these numbers you were the third highest performance seller among your competitors',
+            },
+            'section_4' : {
+                'title': "Get an edge over your competitors with unique insights into your sales",
+                'question': "For product A, give me a country where we are currently not present but that we can expand.",
+                'button_text': 'Answer',
+                'answer': "India has very similar regulation than your country for product A. Other critical factors such as buyer's purchasing parity and imports are also similar. Would you like to discuss this option in more detail?",
+            },
+            'section_5' : {
+                'title': "Do you have a question about your sales or the market? We are available 24/7 by text and voice",
+                'question': "It's 2am, I couldn't sleep and I wondered: What are our sales projection if we buy competitor B?",
+                'button_text': 'Answer',
+                'answer': 'Acquiring competitor B would give us a combined sales of 738 units per day and a total market share of 29%. Would you like me to list the potential problems that we might have to solve to make this acquisition happen?',
+            },
+            'section_6' : {
+                'title': 'We answer privately "those" questions that worry you. Your conversations are 100% confidential. Nobody - not even us or your company - have access to them or can read them',
+                'question': "If we continue at this pace, what will be our sales at the end of the year compared with the competition?",
+                'button_text': 'Answer',
+                'answer': 'Last year we were the second best performing company in sales, at this pace this year we will be the fourth. Would you like me to list what changed in terms of sales effectiveness?',
+            },
+            'section_7' : {
+                'title': "During a meeting a board member asks an unexpected question, we are here with you",
+                'question': "Board member: It seems that product B is cannibalizing sales of Product A. Is that so?",
+                'button_text': 'Answer',
+                'answer': 'Not really, it just so happens that product B is in a growing market and the main market for product A is in a recession that has insensified lately.',
             },
         },
     })
@@ -46,25 +76,113 @@ def ceos(request):
 def buyer(request):
     return render(request, 'public/buyer.html', {
         'page_title': 'NORTATEM | Buyer',
-        # 'page_css': 'public/css/index.css', #optional
-        # 'page_js': 'public/js/index.js', #optional
-        # 'page_keywords': 'NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
-        # 'page_description': 'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required',
+        'page_css': 'public/css/buyer.css', #optional
+        'page_js': 'public/js/buyer.js', #optional
+        'page_keywords': 'buyers, purchasing managers, purchasing, NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
+        'page_description': "NORTATEM buyer explains the advantages and benefits of NORTATEM for buyers or purchasing managers. Using a language model, our chatGPT, we explain how buyers can cover all potential and current suppliers from all countries. NORTATEM also provides assistance in the purchasing negotiation and a review of how the negotiation was conducted to improve for the next one.",
         'navbar': navbar,
         'footer': footer,
         'cookie_policy': cookie_policy,
+        'content': {
+            'section_1' : {
+                'title': 'Keep all suppliers (current and new) under control. For all products and countries',
+                'question': "Give me a list of all suppliers for product A",
+                'button_text': 'Answer',
+                'answer': 'India: 19 suppliers, we work with 3. South Korea: 2 suppliers, we work with 1. Italy: 5 suppliers, we work with 2. Chile: 7 suppliers, we work with 3.',
+            },
+            'section_2' : {
+                'title': 'Our pricing makes us affordable for all companies. You will always find a supplier that meets your requirements and purchasing plan',
+                'question': "We need a new supplier for a test of a new product. These are the requirements public and private information. Show me a list of potential suppliers sorted by proximity and that have been pre-screened.",
+                'button_text': 'Answer',
+                'answer': 'Pakistan: company A, company B, company C and company D. India: company E, company F, company G. Indonesia: company H, etc...',
+            },
+            'section_3' : {
+                'title': 'Keep all your buy orders under control. Making sure that you are delivering on the purchasing plan objetives',
+                'question': "Give me a list of all my orders and their status.",
+                'button_text': 'Answer',
+                'answer': 'You have 83 buy orders in 5 markets. 94% are being pre-negotiated at the moment. Here is a breakdown of each order and its status: Order A, etc...',
+            },
+            'section_4' : {
+                'title': 'Based on your objectives create "buy offers" that include public and private information. We pre-negotiate them hundreds of times for you. You only deal with solid offers that need to be closed',
+                'question': "Public information: Buy 300 liters of olive oil at €2.53. Private information: I can go up to €2.55.",
+                'button_text': 'Answer',
+                'answer': 'We found two suppliers. Supplier A offered 211 liters at €2.55. Supplier B offered 313 liters at €2.53. Your order was negotiated 52 times with different suppliers.',
+            },
+            'section_5' : {
+                'title': 'Sellers often underestimate the effort that it takes to answer. With us: 1) Add a buy offer 2) Your buy offer is pre-negotiated intensively 3) You step in and conduct the final negotiation',
+                'question': "Instead of receiving phone calls, faxes, emails, etc. Notify suppliers that my offers will be submitted and pre-negotiated here.",
+                'button_text': 'Answer',
+                'answer': 'Of course, we work 24/7 and this is the current state of the market',
+            },
+            'section_6' : {
+                'title': 'Improve your negotiation skills. We offer confidential statistics - not even us or your company have access to them - for every negotiation',
+                'question': "Give the statistics of my last closing negotiation",
+                'button_text': 'Answer',
+                'answer': 'For negotiation number #33772 you said 3,532 words, the seller said #22,493. The arguments you used are effective 56% of the time. We suggest that in the next one you listen a bit more, you did more talking than the seller.',
+            },
+            'section_7' : {
+                'title': 'We provide assistance during the negotiation process to facilitate closing a deal',
+                'question': "How can I close a deal with this supplier?",
+                'button_text': 'Answer',
+                'answer': 'This supplier does not offer that discount for your default destination location. Consider telling him that he can ship the goods to your facilities in Morocco, where their discounts apply.',
+            },
+        },
     })
 
 def seller(request):
     return render(request, 'public/seller.html', {
         'page_title': 'NORTATEM | Seller',
-        # 'page_css': 'public/css/index.css', #optional
-        # 'page_js': 'public/js/index.js', #optional
-        # 'page_keywords': 'NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
-        # 'page_description': 'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required',
+        'page_css': 'public/css/seller.css', #optional
+        'page_js': 'public/js/seller.js', #optional
+        'page_keywords': 'sellers, selling managers, selling, NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
+        'page_description': "NORTATEM seller explains the advantages and benefits of NORTATEM for sellers or sales managers. Using a language model, our chatGPT, we explain how sellers can cover all potential and current buyers from all countries. NORTATEM also provides assistance in the sales negotiation and a review of how the negotiation was conducted to improve for the next one.",
         'navbar': navbar,
         'footer': footer,
         'cookie_policy': cookie_policy,
+        'content': {
+            'section_1' : {
+                'title': 'Start the day by checking all your buy orders per sales objective',
+                'question': "List all my orders per product and status",
+                'button_text': 'Answer',
+                'answer': 'Product A: 5 orders in 5 countries. Order in Croatia is waiting for your closing. The order in Panama is being negotiated. The order in...',
+            },
+            'section_2' : {
+                'title': 'No more endless prospecting. Go straight to negotiate buy pre-negotiated buy offers',
+                'question': "List the buy orders that are waiting for my closing",
+                'button_text': 'Answer',
+                'answer': 'Order #3492 product A in Mexico is offering to purchase 212 units at €2.11 per unit',
+            },
+            'section_3' : {
+                'title': 'Contact companies in a way that is consistent, get immediate response so you know what to do next',
+                'question': "I just offered 943 units of product A for €1.93. Less that 1 minute later the answer is:",
+                'button_text': 'Answer',
+                'answer': 'The pre-negotiation indicates that the color of your product needs to be blue to be approved, can you check if you have it available and modify your offer accordingly?',
+            },
+            'section_4' : {
+                'title': 'The function of sales is about client fit and being strategic about units and pricing',
+                'question': "List all the sales offers that I have that are not being successful at pre-negotiation and the reasons",
+                'button_text': 'Answer',
+                'answer': 'Sales offer #892 - the customer indicated that you cannot deliver the product on time and that you do not offer a test order. Do you want to change this offer?',
+            },
+            'section_5' : {
+                'title': "Have a consistent and responsive way to reach all companies - now it's about how good you are",
+                'question': "Instead of sending phone calls, faxes, emails, etc. I here is my sales offer for this buy offer.",
+                'button_text': 'Answer',
+                'answer': 'Your offer is being pre-negotiated, you will have an answer within minutes. If successful you and the buyer will enter a negotiation room.',
+            },
+            'section_6' : {
+                'title': 'Improve your negotiation skills. We offer confidential statistics - not even us or your company have access to them - for every negotiation',
+                'question': "Give the statistics of my last closing negotiation",
+                'button_text': 'Answer',
+                'answer': 'We noticed a mismatch between what the buyer was asking and what you were responding. That generated mistrust on the part of the buyer. This is probably the reason that caused the negotiation to stop.',
+            },
+            'section_7' : {
+                'title': 'We provide assistance during the negotiation process to facilitate closing a deal',
+                'question': "How can I close a deal with this buyer?",
+                'button_text': 'Answer',
+                'answer': 'This seller has several orders for this product that combined amount to 928 units. These are sell orders #343 #431 #389 why not suggest adding them all up and then offer shipping to the three different destinations?',
+            },
+        },
     })
 
 def government(request):

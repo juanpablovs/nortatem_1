@@ -1,0 +1,104 @@
+section {
+    background-color: var(--nortatem-red-12-transp);
+    box-sizing: border-box;
+    margin: 3% 0 0;
+    padding: 2% 4%;
+    min-height: 400px;
+}
+
+h1.section-title {
+    margin: 2% 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: var(--nortatem-red-no-transp);
+}
+
+.section-body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-body-question, .section-body-button, .section-body-answer {
+    box-sizing: border-box;
+    margin: 5% auto;
+    padding: 0;
+}
+
+.section-body-question > p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.btn {
+    margin: 0;
+    padding: 10px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: var(--white-no-transp);
+    background-color: var(--green-no-transp);
+    border: none;
+    border-radius: 15px;
+    white-space: nowrap;
+}
+
+.btn:active {
+	transform: scale(0.9);
+}
+
+.section-body-answer > p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: monospace, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+
+    h1.section-title {
+    margin: 2% 0 0;
+    font-size: 1.4rem;
+    }
+
+    .section-body {
+        flex-direction: row;
+        height: 300px;
+    }
+
+    .section-body-question, .section-body-button, .section-body-answer {
+        flex: 1;
+    }
+
+    .btn {
+        padding: 20px 35px;
+        font-size: 1.2rem;
+    }
+
+    .section-body-question > p, .section-body-answer > p {
+        text-align: start;
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .section-body-button {
+        text-align: center;
+    }
+}

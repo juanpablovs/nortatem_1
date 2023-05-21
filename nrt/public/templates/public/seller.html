@@ -8,7 +8,105 @@
 {% block body %}
 
 <main>
-<h1>this is seller</h1>
+
+    <section>
+        <h1 class="section-title">{{ content.section_1.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_1.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer" data-id="seller-section-body-answer-exhaustive" data-answer="{{ content.section_1.answer }}">{{ content.section_1.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="seller-section-body-answer-exhaustive"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="section-title">{{ content.section_2.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_2.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer" data-id="seller-section-body-answer-reliability" data-answer="{{ content.section_2.answer }}">{{ content.section_2.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="seller-section-body-answer-reliability"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="section-title">{{ content.section_3.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_3.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer" data-id="seller-section-body-answer-variability" data-answer="{{ content.section_3.answer }}">{{ content.section_3.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="seller-section-body-answer-variability"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="section-title">{{ content.section_4.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_4.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer" data-id="seller-section-body-answer-functionality" data-answer="{{ content.section_4.answer }}">{{ content.section_4.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="seller-section-body-answer-functionality"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="section-title">{{ content.section_5.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_5.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer" data-id="seller-section-body-answer-convenience" data-answer="{{ content.section_5.answer }}">{{ content.section_5.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="seller-section-body-answer-convenience"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="section-title">{{ content.section_6.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_6.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer" data-id="seller-section-body-answer-emotional" data-answer="{{ content.section_6.answer }}">{{ content.section_6.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="seller-section-body-answer-emotional"></p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1 class="section-title">{{ content.section_7.title }}</h1>
+        <div class="section-body">
+            <div class="section-body-question">
+                <p>{{ content.section_7.question }}</p>
+            </div>
+            <div class="section-body-button">
+                <button type="button" class="btn generateAnswer" data-id="seller-section-body-answer-social" data-answer="{{ content.section_7.answer }}">{{ content.section_7.button_text }}</button>
+            </div>
+            <div class="section-body-answer">
+                <p id="seller-section-body-answer-social"></p>
+            </div>
+        </div>
+    </section>
 </main>
 
 {% endblock body %}
