@@ -76,25 +76,113 @@ def ceos(request):
 def buyer(request):
     return render(request, 'public/buyer.html', {
         'page_title': 'NORTATEM | Buyer',
-        # 'page_css': 'public/css/index.css', #optional
-        # 'page_js': 'public/js/index.js', #optional
-        # 'page_keywords': 'NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
-        # 'page_description': 'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required',
+        'page_css': 'public/css/buyer.css', #optional
+        'page_js': 'public/js/buyer.js', #optional
+        'page_keywords': 'buyers, purchasing managers, purchasing, NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
+        'page_description': "NORTATEM buyer explains the advantages and benefits of NORTATEM for buyers or purchasing managers. Using a language model, our chatGPT, we explain how buyers can cover all potential and current suppliers from all countries. NORTATEM also provides assistance in the purchasing negotiation and a review of how the negotiation was conducted to improve for the next one.",
         'navbar': navbar,
         'footer': footer,
         'cookie_policy': cookie_policy,
+        'content': {
+            'section_1' : {
+                'title': 'Keep all suppliers (current and new) under control. For all products and countries',
+                'question': "Give me a list of all suppliers for product A",
+                'button_text': 'Answer',
+                'answer': 'India: 19 suppliers, we work with 3. South Korea: 2 suppliers, we work with 1. Italy: 5 suppliers, we work with 2. Chile: 7 suppliers, we work with 3.',
+            },
+            'section_2' : {
+                'title': 'Our pricing makes us affordable for all companies. You will always find a supplier that meets your requirements and purchasing plan',
+                'question': "We need a new supplier for a test of a new product. These are the requirements public and private information. Show me a list of potential suppliers sorted by proximity and that have been pre-screened.",
+                'button_text': 'Answer',
+                'answer': 'Pakistan: company A, company B, company C and company D. India: company E, company F, company G. Indonesia: company H, etc...',
+            },
+            'section_3' : {
+                'title': 'Keep all your buy orders under control. Making sure that you are delivering on the purchasing plan objetives',
+                'question': "Give me a list of all my orders and their status.",
+                'button_text': 'Answer',
+                'answer': 'You have 83 buy orders in 5 markets. 94% are being pre-negotiated at the moment. Here is a breakdown of each order and its status: Order A, etc...',
+            },
+            'section_4' : {
+                'title': 'Based on your objectives create "buy offers" that include public and private information. We pre-negotiate them hundreds of times for you. You only deal with solid offers that need to be closed',
+                'question': "Public information: Buy 300 liters of olive oil at €2.53. Private information: I can go up to €2.55.",
+                'button_text': 'Answer',
+                'answer': 'We found two suppliers. Supplier A offered 211 liters at €2.55. Supplier B offered 313 liters at €2.53. Your order was negotiated 52 times with different suppliers.',
+            },
+            'section_5' : {
+                'title': 'Sellers often underestimate the effort that it takes to answer. With us: 1) Add a buy offer 2) Your buy offer is pre-negotiated intensively 3) You step in and conduct the final negotiation',
+                'question': "Instead of receiving phone calls, faxes, emails, etc. Notify suppliers that my offers will be submitted and pre-negotiated here.",
+                'button_text': 'Answer',
+                'answer': 'Of course, we work 24/7 and this is the current state of the market',
+            },
+            'section_6' : {
+                'title': 'Improve your negotiation skills. We offer confidential statistics - not even us or your company have access to them - for every negotiation',
+                'question': "Give the statistics of my last closing negotiation",
+                'button_text': 'Answer',
+                'answer': 'For negotiation number #33772 you said 3,532 words, the seller said #22,493. The arguments you used are effective 56% of the time. We suggest that in the next one you listen a bit more, you did more talking than the seller.',
+            },
+            'section_7' : {
+                'title': 'We provide assistance during the negotiation process to facilitate closing a deal',
+                'question': "How can I close a deal with this supplier?",
+                'button_text': 'Answer',
+                'answer': 'This supplier does not have this discount your default destination location. Consider telling him that he can ship the goods to your facilities in Morocco, where their discounts apply.',
+            },
+        },
     })
 
 def seller(request):
     return render(request, 'public/seller.html', {
         'page_title': 'NORTATEM | Seller',
-        # 'page_css': 'public/css/index.css', #optional
-        # 'page_js': 'public/js/index.js', #optional
-        # 'page_keywords': 'NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
-        # 'page_description': 'Looking to increase margins via sales or purchasing? With more than 7,000,000 companies from all over the world we automatize the tedious parts of selling and buying. Works from day 1. No training required',
+        'page_css': 'public/css/seller.css', #optional
+        'page_js': 'public/js/seller.js', #optional
+        'page_keywords': 'sellers, selling managers, selling, NORTATEM, B2B marketplace, chatGPT, language model, machine learning, wholesalers, distributors, sellers, purchasing managers, sales, B2B sales, find B2B buyers, find B2B suppliers, machine learning, automated sales, artificial intelligence',
+        'page_description': "NORTATEM seller explains the advantages and benefits of NORTATEM for sellers or sales managers. Using a language model, our chatGPT, we explain how sellers can cover all potential and current buyers from all countries. NORTATEM also provides assistance in the sales negotiation and a review of how the negotiation was conducted to improve for the next one.",
         'navbar': navbar,
         'footer': footer,
         'cookie_policy': cookie_policy,
+        'content': {
+            'section_1' : {
+                'title': '',
+                'question': "",
+                'button_text': 'Answer',
+                'answer': '',
+            },
+            'section_2' : {
+                'title': '',
+                'question': "",
+                'button_text': 'Answer',
+                'answer': '',
+            },
+            'section_3' : {
+                'title': '',
+                'question': "",
+                'button_text': 'Answer',
+                'answer': '',
+            },
+            'section_4' : {
+                'title': '',
+                'question': "",
+                'button_text': 'Answer',
+                'answer': '',
+            },
+            'section_5' : {
+                'title': '',
+                'question': "",
+                'button_text': 'Answer',
+                'answer': '',
+            },
+            'section_6' : {
+                'title': '',
+                'question': "",
+                'button_text': 'Answer',
+                'answer': '',
+            },
+            'section_7' : {
+                'title': '',
+                'question': "",
+                'button_text': 'Answer',
+                'answer': '',
+            },
+        },
     })
 
 def government(request):
