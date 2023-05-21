@@ -30,7 +30,7 @@ def ceos(request):
         'content': {
             'section_1' : {
                 'title': 'Get ALL the critical information from your competitors, customers and your company',
-                'question': "Compare yesterday's sales of my company with those of my competitors",
+                'question': "Compare our yesterday's sales with my competitors",
                 'button_text': 'Answer',
                 'answer': 'Competitor A sold 582 units at an average of €2.79 per unit. Competitor B sold 889 units at €2.19 on average. Our sales were 329 units at an average of €2.89. Based on this data, do you want me to estimate our sales and those of the competition for this week?',
             },
@@ -38,7 +38,37 @@ def ceos(request):
                 'title': "Save time and money with a consultant who is 100% independent, unbiased and completely confidential",
                 'question': "Give me the breakdown of product A's sales by country, units, and price. Order the result by number of units.",
                 'button_text': 'Answer',
-                'answer': 'Yesterday, product A in country A sold 21 units at €2.1. In country B 19 units were sold at €2.3 and in country C 14 units were sold at €2.10. Commercial efficiency has decreased compared to the previous day',
+                'answer': 'Yesterday, product A in Brazil sold 21 units at €2.1. In Germany 19 units were sold at €2.3 and in Indonesia 14 units were sold at €2.10. Commercial efficiency has decreased compared to the previous day but it is still 2% higher than last month',
+            },
+            'section_3' : {
+                'title': "Objectively measure your company's sales performance and skills",
+                'question': "Tell me yesterday's closed sales. How many offers we have outstanding and how many sales are being negotiated.",
+                'button_text': 'Answer',
+                'answer': 'Yesterday 32 sales were closed successfully. There are 94 published offers of which 21 of them are being negotiated. According to these numbers you were the third highest performance seller among your competitors',
+            },
+            'section_4' : {
+                'title': "Get an edge over your competitors with unique insights into your sales",
+                'question': "For product A, give me a country where we are currently not present but that we can expand.",
+                'button_text': 'Answer',
+                'answer': "India has very similar regulation than your country for product A. Other critical factors such as buyer's purchasing parity and imports are also similar. Would you like to discuss this option in more detail?",
+            },
+            'section_5' : {
+                'title': "Do you have a question about your sales or the market? We are available 24/7 by text and voice",
+                'question': "It's 2am, I couldn't sleep and I wondered: What are our sales projection if we buy competitor B?",
+                'button_text': 'Answer',
+                'answer': 'Acquiring competitor B would give us a combined sales of 738 units per day and a total market share of 29%. Would you like me to list the potential problems that we might have to solve to make this acquisition happen?',
+            },
+            'section_6' : {
+                'title': 'We answer privately "those" questions that worry you. Your conversations are 100% confidential. Nobody - not even us or your company - have access to them or can read them',
+                'question': "If we continue at this pace, what will be our sales at the end of the year compared with the competition?",
+                'button_text': 'Answer',
+                'answer': 'Last year we were the second best performing company in sales, at this pace this year we will be the fourth. Would you like me to list what changed in terms of sales effectiveness?',
+            },
+            'section_7' : {
+                'title': "During a meeting a board member asks an unexpected question, we are here with you",
+                'question': "Board member: It seems that product B is cannibalizing sales of Product A. Is that so?",
+                'button_text': 'Answer',
+                'answer': 'Not really, it just so happens that product B is in a growing market and the main market for product A is in a recession that has insensified lately.',
             },
         },
     })
